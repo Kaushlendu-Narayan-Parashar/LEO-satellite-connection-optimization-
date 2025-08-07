@@ -1,0 +1,59 @@
+# LEO Satellite Connection Optimization Configuration
+
+# Database Configuration
+database:
+  host: localhost
+  port: 5432
+  name: leo_satellite
+  user: leo_user
+  password: ${DB_PASSWORD}
+
+# Redis Configuration
+redis:
+  host: localhost
+  port: 6379
+  db: 0
+
+# API Configuration
+api:
+  host: 0.0.0.0
+  port: 8000
+  debug: false
+  workers: 4
+
+# Satellite Simulation Configuration
+simulation:
+  default_altitude: 550  # km
+  default_frequency: 12  # GHz
+  sample_rate: 44100
+  window_size: 1024
+
+# AI Configuration
+ai:
+  model_path: models/
+  analysis_window: 24h
+  health_threshold: 0.7
+  prediction_horizon: 7d
+
+# Monitoring Configuration
+monitoring:
+  metrics_interval: 60  # seconds
+  alert_threshold: 0.5
+  retention_days: 30
+
+# Logging Configuration
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: logs/leo_satellite.log
+
+# Weather API Configuration
+weather:
+  api_key: ${WEATHER_API_KEY}
+  base_url: "https://api.openweathermap.org/data/2.5"
+
+# Performance Configuration
+performance:
+  max_concurrent_simulations: 10
+  cache_ttl: 3600  # seconds
+  batch_size: 1000 

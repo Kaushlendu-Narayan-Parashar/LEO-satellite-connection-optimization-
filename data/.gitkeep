@@ -1,0 +1,2 @@
+# This file ensures the data directory is tracked by git
+# Remove this file when actual data files are added 
