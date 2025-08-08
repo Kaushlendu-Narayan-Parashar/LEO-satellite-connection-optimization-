@@ -1,3 +1,56 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+*.log
+.ipynb_checkpoints/
+
+# Virtual environments
+.env
+.venv/
+venv/
+env/
+**/leo_env/
+data/leo_env/
+
+# Byte-compiled caches anywhere
+**/__pycache__/
+
+# Data folder: ignore everything by default
+data/**
+
+# But allow Git to traverse the directory so we can selectively include files
+!data/
+!data/**/
+
+# Keep only Python source files in data (relevant code)
+!data/**/*.py
+!data/*.py
+
+# If you want to include a readme or setup files in data, un-comment these lines:
+# !data/README.md
+# !data/requirements.txt
+# !data/setup.py
+
+# Explicitly ignore common large/generated artifacts (redundant with data/** but kept for clarity)
+data/**/*.csv
+data/**/*.json
+data/**/*.pdf
+data/**/*.png
+data/**/*.jpg
+data/**/*.jpeg
+data/**/*.svg
+data/**/*.bsp
+data/**/*.tle
+
+# Charts and generated reports
+data/client_charts/
+data/simulation_data/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
